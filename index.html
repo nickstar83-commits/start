@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCT - PE Class Tools</title>
+    <style>
+        /* 기본 설정 */
+        :root {
+            --primary-color: #4a90e2; /* 메인 색상 (파란색 계열) */
+            --bg-color: #f4f7f6;      /* 배경 색상 (아주 연한 회색) */
+            --card-bg: #ffffff;       /* 카드 배경 색상 */
+            --text-main: #333333;     /* 진한 글자색 */
+            --text-sub: #666666;      /* 연한 글자색 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 컨테이너 */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-sub);
+        }
+        
+        /* 작성자 정보 스타일 추가 */
+        .developer-info {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* 프로젝트 카드 스타일 */
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: left;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            background: #eef4ff;
+            padding: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* 링크 버튼 스타일 */
+        .btn-link {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .btn-link:hover {
+            background-color: #357abd;
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 480px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .card-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .btn-link {
+                margin-left: 0;
+                margin-top: 20px;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>PE Class Tools</h1>
+            <p>체육 수업에 유용한 프로그램들을 소개합니다.</p>
+            <p class="developer-info">Developed by LKH</p>
+        </header>
+
+        <div class="project-list">
+            
+            <div class="card">
+                <div class="card-icon">🏆</div> 
+                <div class="card-content">
+                    <h2>스포츠 리그전 매니저</h2>
+                    <p>리그 일정 관리 및 순위 자동 계산 도구</p>
+                </div>
+                <a href="https://nickstar83-commits.github.io/leaguemanager/" class="btn-link" target="_blank">바로가기</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎳</div> 
+                <div class="card-content">
+                    <h2>볼링 스코어 계산</h2>
+                    <p>복잡한 볼링 점수를 손쉽게 계산하는 프로그램</p>
+                </div>
+                <a href="https://nickstar83-commits.github.io/bowling/" class="btn-link" target="_blank">바로가기</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⏱️</div> 
+                <div class="card-content">
+                    <h2>웹 타이머&스탑워치</h2>
+                    <p>연습 및 경기 시간을 조절하는 타이머 도구</p>
+                </div>
+                <a href="https://nickstar83-commits.github.io/timenwatch/" class="btn-link" target="_blank">바로가기</a>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
